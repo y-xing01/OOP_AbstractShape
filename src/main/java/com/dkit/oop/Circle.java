@@ -17,7 +17,7 @@ public class Circle extends Shape {
     }
 
     /**
-     * Implement the inherited abstract getArea() method
+     * Implement the inherited abstract area() method
      * (this must be implemented, otherwise an error is reported)
      *
      * @return area of a circle
