@@ -45,11 +45,17 @@ public class App
         displayList(shapes);
         // using a for loop, sum the area of all the shapes and output that sum.
         System.out.printf("\nTotal sum area of all shapes is : %.2f", sumArea(shapes));
-
+        System.out.println("\n");
         //TODO
         // The senior architect informs you that all shapes MUST have a method
         // called perimeter() that returns the perimeter of the shape.
         // Make the appropriate changes to the Shape, Circle and Rectangle classes.
+        System.out.println("Perimeter of all shapes");
+        System.out.println("***********************");
+        for(Shape shape : shapes)
+        {
+            System.out.printf("%.2f\n", shape.perimeter());
+        }
     }
 
     public void displayList(ArrayList<Shape> shapes)
