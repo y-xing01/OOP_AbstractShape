@@ -1,5 +1,8 @@
 package com.dkit.oop;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Abstract class Shape
  * oop-abstract-class-shape
@@ -16,17 +19,30 @@ public class App
     public void start() {
 
         //  Shape s1 = new Shape(2,3);  // compiler will complain. Cannot create an object of an Abstract class.
-
+        System.out.println();
         Circle c1 = new Circle(1,2,5);
         System.out.println(c1.toString());
 
         //TODO
         // implement the Rectangle class (see skeleton Rectangle class).
-        // instantiate a Rectangle object r1, and output its details.
+        System.out.println();
+        Rectangle r1 = new Rectangle(1,2, 1,2);
+        System.out.println(r1.toString());
 
         //TODO
         // create an ArrayList and populate it with two Circles and two Rectangles.
+        System.out.println();
+        Circle c2 = new Circle(1, 2, 8);
+        Rectangle r2 = new Rectangle(1, 2, 3, 4);
+        ArrayList<Shape> shapes = new ArrayList<>();
+        shapes.add(c1);
+        shapes.add(c2);
+        shapes.add(r1);
+        shapes.add(r2);
+
+
         // write a displayList() method that accepts the list and display all elements.
+        displayList(shapes);
         // using a for loop, sum the area of all the shapes and output that sum.
 
         //TODO
@@ -34,4 +50,27 @@ public class App
         // called perimeter() that returns the perimeter of the shape.
         // Make the appropriate changes to the Shape, Circle and Rectangle classes.
     }
+
+    public void displayList(ArrayList<Shape> shapes)
+    {
+        System.out.println("List of Shapes");
+        System.out.println("**************");
+        for(Shape shape : shapes)
+        {
+            System.out.println(shape.toString());
+        }
+    }
+
+//    public double sumArea(ArrayList<Shape> shapes)
+//    {
+//        for(Shape shape : shapes)
+//        {
+//            if(shape instanceof Circle)
+//            {
+//                Circle c1 = (Circle) shape;
+//                c1.get();
+//            }
+//        }
+//    }
+
 }
