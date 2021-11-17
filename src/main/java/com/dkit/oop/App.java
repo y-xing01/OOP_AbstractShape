@@ -44,6 +44,7 @@ public class App
         // write a displayList() method that accepts the list and display all elements.
         displayList(shapes);
         // using a for loop, sum the area of all the shapes and output that sum.
+        System.out.printf("\nTotal sum area of all shapes is : %.2f", sumArea(shapes));
 
         //TODO
         // The senior architect informs you that all shapes MUST have a method
@@ -61,16 +62,14 @@ public class App
         }
     }
 
-//    public double sumArea(ArrayList<Shape> shapes)
-//    {
-//        for(Shape shape : shapes)
-//        {
-//            if(shape instanceof Circle)
-//            {
-//                Circle c1 = (Circle) shape;
-//                c1.get();
-//            }
-//        }
-//    }
+    public double sumArea(ArrayList<Shape> shapes)
+    {
+        double totalArea = 0;
+        for(Shape shape : shapes)
+        {
+           totalArea += shape.area();
+        }
+        return totalArea;
+    }
 
 }
